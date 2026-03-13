@@ -26,10 +26,10 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer className="bg-navy text-cream">
-      <div className="container-site py-14 sm:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container-site max-w-5xl py-14 sm:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto] lg:gap-16">
           {/* Brand column */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="relative size-10 overflow-hidden rounded-full bg-cream shrink-0">
                 <Image

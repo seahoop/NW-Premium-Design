@@ -36,7 +36,7 @@ export function ContactCTA() {
               href="/contact"
               className={cn(
                 buttonVariants({ size: "lg", variant: "outline" }),
-                "w-full gap-2 border-cream/40 text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
+                "w-full gap-2 bg-transparent border-cream/40 text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
               )}
             >
               Send a Message

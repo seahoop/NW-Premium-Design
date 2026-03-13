@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDown, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
@@ -25,18 +24,10 @@ const itemVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/images/hero/hero-kitchen.jpg"
-        alt="Beautiful kitchen remodel by NW Premium Design in Seattle"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-        quality={85}
-      />
-
+    <section
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/images/hero/hero-kitchen.jpg')" }}
+    >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/60 to-navy/75" />
 
@@ -91,7 +82,7 @@ export function HeroSection() {
             href="/gallery"
             className={cn(
               buttonVariants({ size: "lg", variant: "outline" }),
-              "w-full border-cream/60 text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
+              "w-full bg-transparent border-cream/60 text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
             )}
           >
             See Our Work

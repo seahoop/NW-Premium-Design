@@ -87,7 +87,7 @@ export function Header() {
               }),
               "hidden gap-2 sm:flex",
               !(scrolled || !isHomePage) &&
-                "border-cream/60 text-cream hover:bg-cream hover:text-navy"
+                "bg-transparent border-cream/60 text-cream hover:bg-cream hover:text-navy"
             )}
           >
             <Phone className="size-3.5" />
