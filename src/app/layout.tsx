@@ -29,6 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <meta name="color-scheme" content="only light" />
+        <meta name="darkreader-lock" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

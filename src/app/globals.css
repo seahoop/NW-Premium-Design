@@ -106,6 +106,7 @@
   }
   html {
     @apply font-sans scroll-smooth;
+    color-scheme: only light;
   }
   body {
     @apply bg-background text-foreground antialiased;
