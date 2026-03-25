@@ -7,6 +7,7 @@ import {
   Mail,
   Star,
   ExternalLink,
+  MessageSquare,
 } from "lucide-react";
 import { BUSINESS, NAV_LINKS } from "@/lib/constants";
 
@@ -21,6 +22,11 @@ const SOCIAL_LINKS = [
     href: BUSINESS.social.google,
     icon: Star,
   },
+  {
+    label: "Yelp",
+    href: BUSINESS.social.yelp,
+    icon: MessageSquare,
+  },
 ] as const;
 
 export function Footer() {
@@ -31,13 +37,13 @@ export function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="relative size-10 overflow-hidden rounded-full bg-cream shrink-0">
+              <div className="relative size-10 overflow-hidden rounded-lg bg-cream shrink-0">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo_icon.jpg"
                   alt="NW Premium Design LLC logo"
                   fill
                   sizes="40px"
-                  className="object-contain p-0.5"
+                  className="object-cover"
                 />
               </div>
               <span className="font-serif text-base font-semibold leading-tight">
@@ -112,14 +118,13 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={BUSINESS.social.google}
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.address.full)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 transition-colors hover:text-cream"
+                  className="flex items-start gap-2 transition-colors hover:text-cream"
                 >
-                  <MapPin className="size-4 shrink-0" />
-                  {BUSINESS.address.display}
-                  <ExternalLink className="size-3 shrink-0" />
+                  <MapPin className="size-4 shrink-0 mt-0.5" />
+                  <span>{BUSINESS.address.full}</span>
                 </a>
               </li>
             </ul>

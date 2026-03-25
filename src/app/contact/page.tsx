@@ -34,9 +34,9 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Service Area",
-    value: "Seattle, WA & Greater Puget Sound",
-    href: BUSINESS.social.google,
+    label: "Address",
+    value: BUSINESS.address.full,
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.address.full)}`,
     external: true,
   },
   {

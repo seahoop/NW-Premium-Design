@@ -25,6 +25,8 @@ const itemVariants = {
 export function HeroSection() {
   return (
     <section
+      role="img"
+      aria-label="Beautiful kitchen remodel by NW Premium Design"
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/hero/hero-kitchen.jpg')" }}
     >

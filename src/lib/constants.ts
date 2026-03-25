@@ -1,23 +1,26 @@
 export const BUSINESS = {
   name: "NW Premium Design LLC",
   shortName: "NW Premium Design",
-  phone: "+12065550100",
-  phoneDisplay: "(206) 555-0100",
-  email: "info@nwpremiumdesign.com",
+  phone: "+12538869342",
+  phoneDisplay: "(253) 886-9342",
+  email: "Alexpremiumdesign@gmail.com",
   address: {
-    city: "Seattle",
+    street: "4005 S 300th St",
+    city: "Auburn",
     state: "WA",
+    zip: "98001",
     country: "US",
     display: "Seattle, WA & Greater Puget Sound",
+    full: "4005 S 300th St, Auburn, WA 98001",
   },
   geo: {
-    lat: 47.6062,
-    lng: -122.3321,
+    lat: 47.3307,
+    lng: -122.2285,
   },
   social: {
     instagram: "https://www.instagram.com/nw_premium_design/",
     google: "https://maps.app.goo.gl/yssrBdLhjwdgmi989",
-    yelp: "", // placeholder — add when Yelp page is created
+    yelp: "https://yelp.to/9FP2Ot5Nq_",
     facebook: "", // placeholder
     tiktok: "", // placeholder
   },

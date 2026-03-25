@@ -1,4 +1,4 @@
-import { Instagram, ExternalLink, Star } from "lucide-react";
+import { Instagram, ExternalLink, Star, MessageSquare } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 const links = [
@@ -13,6 +13,12 @@ const links = [
     href: BUSINESS.social.google,
     icon: Star,
     description: "Google Business · 5.0 ★",
+  },
+  {
+    label: "Yelp",
+    href: BUSINESS.social.yelp,
+    icon: MessageSquare,
+    description: "Reviews on Yelp",
   },
 ] as const;
 

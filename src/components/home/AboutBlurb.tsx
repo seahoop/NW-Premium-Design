@@ -44,13 +44,22 @@ export function AboutBlurb() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-cream transition-colors hover:bg-navy-light"
-            >
-              Meet Alex
-              <ArrowRight className="size-4" />
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-cream transition-colors hover:bg-navy-light"
+              >
+                Meet Alex
+                <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                href="/gallery"
+                className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-7 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream-dark"
+              >
+                View Our Work
+                <ArrowRight className="size-4" />
+              </Link>
+            </div>
           </AnimatedSection>
 
           {/* Image side */}

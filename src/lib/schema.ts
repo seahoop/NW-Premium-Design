@@ -15,8 +15,10 @@ export function buildLocalBusinessSchema() {
     email: BUSINESS.email,
     address: {
       "@type": "PostalAddress",
+      streetAddress: BUSINESS.address.street,
       addressLocality: BUSINESS.address.city,
       addressRegion: BUSINESS.address.state,
+      postalCode: BUSINESS.address.zip,
       addressCountry: BUSINESS.address.country,
     },
     geo: {
@@ -30,6 +32,8 @@ export function buildLocalBusinessSchema() {
       { "@type": "City", name: "Kirkland" },
       { "@type": "City", name: "Redmond" },
       { "@type": "City", name: "Renton" },
+      { "@type": "City", name: "Auburn" },
+      { "@type": "City", name: "Kent" },
       { "@type": "City", name: "Shoreline" },
       { "@type": "City", name: "Bothell" },
     ],
@@ -69,6 +73,7 @@ export function buildLocalBusinessSchema() {
     sameAs: [
       BUSINESS.social.instagram,
       BUSINESS.social.google,
+      BUSINESS.social.yelp,
     ].filter(Boolean),
     image: `${SITE_URL}/og-image.jpg`,
     priceRange: "$$",

@@ -27,13 +27,13 @@ export function Header() {
       <div className="container-site flex h-16 items-center justify-between sm:h-18">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="relative size-10 overflow-hidden rounded-full bg-cream shadow-sm">
+          <div className="relative size-10 overflow-hidden rounded-lg bg-cream shadow-sm">
             <Image
-              src="/logo.jpg"
+              src="/logo_icon.jpg"
               alt="NW Premium Design LLC logo"
               fill
               sizes="40px"
-              className="object-contain p-0.5"
+              className="object-cover"
             />
           </div>
           <span
