@@ -9,7 +9,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | NW Premium Design LLC",
   },
   description:
-    "Seattle's trusted cabinet installer and kitchen remodeler. NW Premium Design LLC offers kitchen remodeling, bathroom remodeling, IKEA cabinet installation, and cabinet supply. Free estimates.",
+    "Seattle's trusted cabinet installer and kitchen remodeler serving Bellevue, Tacoma, Kirkland, Redmond, Renton, Auburn, Kent & the greater Puget Sound area. IKEA, European & custom cabinets. Free estimates.",
   keywords: [
     "cabinet installer Seattle",
     "kitchen remodeler Seattle",
@@ -17,10 +17,27 @@ export const defaultMetadata: Metadata = {
     "kitchen remodel Seattle WA",
     "bathroom remodel Seattle",
     "cabinet installer near me",
+    "kitchen remodeler near me",
     "NW Premium Design",
     "kitchen renovation Seattle",
     "cabinet supply Seattle",
     "remodeling contractor Seattle",
+    "cabinet installer Bellevue",
+    "kitchen remodel Bellevue WA",
+    "cabinet installer Tacoma",
+    "kitchen remodel Tacoma",
+    "cabinet installer Kirkland",
+    "kitchen remodel Redmond WA",
+    "cabinet installer Renton",
+    "kitchen remodel Auburn WA",
+    "cabinet installer Kent WA",
+    "IKEA cabinet installer Puget Sound",
+    "kitchen remodel Federal Way",
+    "bathroom remodel Bellevue",
+    "cabinet installation Sammamish",
+    "kitchen renovation Issaquah",
+    "remodeling contractor Puget Sound",
+    "kitchen cabinet installer greater Seattle area",
   ],
   authors: [{ name: "NW Premium Design LLC" }],
   creator: "NW Premium Design LLC",
@@ -37,7 +54,7 @@ export const defaultMetadata: Metadata = {
     title:
       "NW Premium Design LLC | Cabinet Installer & Kitchen Remodeler Seattle",
     description:
-      "Seattle's trusted cabinet installer and kitchen remodeler. Free estimates on kitchen remodeling, bathroom remodeling, and cabinet installation.",
+      "Seattle & greater Puget Sound's trusted cabinet installer and kitchen remodeler. Serving Bellevue, Tacoma, Kirkland, Redmond & more. Free estimates.",
     images: [
       {
         url: "/og-image.jpg",

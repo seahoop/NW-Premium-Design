@@ -31,6 +31,38 @@ export const BUSINESS = {
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nwpremiumdesign.com";
 
+export const SERVICE_AREAS = [
+  "Seattle",
+  "Bellevue",
+  "Kirkland",
+  "Redmond",
+  "Renton",
+  "Auburn",
+  "Kent",
+  "Tacoma",
+  "Federal Way",
+  "Shoreline",
+  "Bothell",
+  "Lynnwood",
+  "Edmonds",
+  "Burien",
+  "Tukwila",
+  "SeaTac",
+  "Mercer Island",
+  "Sammamish",
+  "Issaquah",
+  "Woodinville",
+  "Maple Valley",
+  "Covington",
+  "Puyallup",
+  "Lakewood",
+  "Bonney Lake",
+  "Enumclaw",
+  "Snoqualmie",
+  "North Bend",
+  "Bainbridge Island",
+] as const;
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },

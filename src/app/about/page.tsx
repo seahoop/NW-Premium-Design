@@ -60,28 +60,69 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-16 overflow-hidden">
-        <div className="relative h-[400px] sm:h-[500px]">
-          <Image
-            src="/images/about/alex-work.jpg"
-            alt="Alex from NW Premium Design working on a kitchen installation in Seattle"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/55 to-navy/80" />
-          <div className="absolute inset-0 flex items-end">
-            <div className="container-site pb-12">
-              <AnimatedSection>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cream/55">
-                  Our Story
-                </p>
-                <h1 className="font-serif text-4xl font-semibold text-cream sm:text-5xl">
-                  About NW Premium Design
-                </h1>
-              </AnimatedSection>
-            </div>
+      <section className="relative bg-navy pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
+        {/* Background image with heavy overlay */}
+        <Image
+          src="/images/hero/hero-kitchen.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top opacity-15"
+          aria-hidden="true"
+        />
+        <div className="container-site relative z-10">
+          <div className="grid items-center gap-10 lg:grid-cols-5 lg:gap-16">
+            {/* Text — 3 cols */}
+            <AnimatedSection direction="left" className="lg:col-span-3 space-y-5">
+              <p className="text-sm font-semibold uppercase tracking-widest text-cream/50">
+                Meet the Owner
+              </p>
+              <h1 className="font-serif text-4xl font-semibold text-cream sm:text-5xl lg:text-6xl">
+                Built by Hand.
+                <br />
+                <span className="text-cream/70">Backed by Trust.</span>
+              </h1>
+              <p className="max-w-lg text-base leading-relaxed text-cream/65 sm:text-lg">
+                Alex personally handles every project — from the first estimate
+                to the final installation. No subcontractors, no surprises.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3 text-sm font-semibold text-navy transition-colors hover:bg-white"
+                >
+                  Get a Free Estimate
+                  <ArrowRight className="size-4" />
+                </Link>
+                <div className="flex items-center gap-2">
+                  <StarRating rating={5} />
+                  <span className="text-sm font-medium text-cream/70">5.0 Google</span>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Photo — 2 cols */}
+            <AnimatedSection direction="right" className="lg:col-span-2 flex justify-center">
+              <div className="relative w-[280px] sm:w-[320px]">
+                <div className="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
+                  <Image
+                    src="/images/about/alex-portrait.jpg"
+                    alt="Alex, owner of NW Premium Design LLC"
+                    width={590}
+                    height={723}
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Name badge */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white px-5 py-2 shadow-lg">
+                  <p className="text-sm font-semibold text-navy whitespace-nowrap">
+                    Alex — Owner &amp; Craftsman
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

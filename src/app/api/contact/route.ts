@@ -91,6 +91,24 @@ export async function POST(req: NextRequest) {
       });
     }
 
+    // Log to Google Sheet
+    const SHEET_URL = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+    if (SHEET_URL) {
+      fetch(SHEET_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: new Date().toISOString(),
+          name,
+          phone,
+          email,
+          service: serviceLabel,
+          timeline: timelineLabel,
+          message,
+        }),
+      }).catch((err) => console.error("Google Sheet error:", err));
+    }
+
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
     console.error("Contact API error:", err);

@@ -75,7 +75,7 @@ export default function ContactPage() {
             {/* Form */}
             <AnimatedSection
               direction="left"
-              className="lg:col-span-3 rounded-2xl bg-white p-6 shadow-sm sm:p-8"
+              className="lg:col-span-3 h-fit rounded-2xl bg-white p-6 shadow-sm sm:p-8"
             >
               <h2 className="font-serif text-2xl font-semibold text-navy mb-1">
                 Send a Message
@@ -122,16 +122,16 @@ export default function ContactPage() {
 
               {/* Social links */}
               <SocialLinks />
-
-              {/* Map */}
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-navy/50 mb-3">
-                  Service Area
-                </h3>
-                <GoogleMapEmbed />
-              </div>
             </AnimatedSection>
           </div>
+
+          {/* Map — full width below */}
+          <AnimatedSection className="mt-12">
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-navy/50 mb-3">
+              Service Area
+            </h3>
+            <GoogleMapEmbed />
+          </AnimatedSection>
         </div>
       </section>
     </>

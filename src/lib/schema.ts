@@ -1,4 +1,4 @@
-import { BUSINESS, SITE_URL } from "@/lib/constants";
+import { BUSINESS, SITE_URL, SERVICE_AREAS } from "@/lib/constants";
 import type { Service } from "@/types/service";
 
 export function buildLocalBusinessSchema() {
@@ -26,17 +26,14 @@ export function buildLocalBusinessSchema() {
       latitude: BUSINESS.geo.lat,
       longitude: BUSINESS.geo.lng,
     },
-    areaServed: [
-      { "@type": "City", name: "Seattle" },
-      { "@type": "City", name: "Bellevue" },
-      { "@type": "City", name: "Kirkland" },
-      { "@type": "City", name: "Redmond" },
-      { "@type": "City", name: "Renton" },
-      { "@type": "City", name: "Auburn" },
-      { "@type": "City", name: "Kent" },
-      { "@type": "City", name: "Shoreline" },
-      { "@type": "City", name: "Bothell" },
-    ],
+    areaServed: SERVICE_AREAS.map((city) => ({
+      "@type": "City" as const,
+      name: city,
+      containedInPlace: {
+        "@type": "State" as const,
+        name: "Washington",
+      },
+    })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Home Remodeling Services",
@@ -86,7 +83,14 @@ export function buildServiceSchema(service: Service) {
     "@type": "Service",
     serviceType: service.title,
     provider: { "@id": `${SITE_URL}/#business` },
-    areaServed: { "@type": "City", name: "Seattle" },
+    areaServed: SERVICE_AREAS.map((city) => ({
+      "@type": "City" as const,
+      name: city,
+      containedInPlace: {
+        "@type": "State" as const,
+        name: "Washington",
+      },
+    })),
     url: `${SITE_URL}/services/${service.slug}`,
     name: service.title,
     description: service.description[0],
