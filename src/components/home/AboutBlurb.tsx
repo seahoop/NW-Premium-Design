@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Hammer, ShieldCheck, Heart } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
@@ -10,6 +9,24 @@ const reasons = [
   "We can source & supply cabinets for you",
   "Honest pricing with no hidden fees",
   "Free in-home estimates",
+];
+
+const highlights = [
+  {
+    icon: Hammer,
+    title: "One Craftsman",
+    description: "Alex personally handles every project from start to finish.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Licensed & Insured",
+    description: "Full WA state contractor coverage for your peace of mind.",
+  },
+  {
+    icon: Heart,
+    title: "5-Star Rated",
+    description: "Trusted by homeowners across the Puget Sound region.",
+  },
 ];
 
 export function AboutBlurb() {
@@ -62,16 +79,26 @@ export function AboutBlurb() {
             </div>
           </AnimatedSection>
 
-          {/* Image side */}
+          {/* Highlights side — replaces image */}
           <AnimatedSection direction="right">
-            <div className="relative aspect-square overflow-hidden rounded-3xl bg-cream-dark shadow-2xl lg:aspect-[4/5]">
-              <Image
-                src="/images/about/alex-work.jpg"
-                alt="Alex from NW Premium Design working on a kitchen installation"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
+            <div className="grid gap-4">
+              {highlights.map(({ icon: Icon, title, description }, i) => (
+                <AnimatedSection key={title} delay={i * 0.12}>
+                  <div className="flex items-start gap-5 rounded-2xl bg-cream-dark p-6">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-navy">
+                      <Icon className="size-6 text-cream" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-semibold text-navy mb-1">
+                        {title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-navy/65">
+                        {description}
+                      </p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
             </div>
           </AnimatedSection>
         </div>
