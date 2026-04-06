@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 import { SITE_URL, BUSINESS } from "@/lib/constants";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { GoogleMapEmbed } from "@/components/contact/GoogleMapEmbed";
+import { ServiceAreaMap } from "@/components/contact/ServiceAreaMap";
 import { SocialLinks } from "@/components/contact/SocialLinks";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
             <h3 className="text-sm font-semibold uppercase tracking-widest text-navy/50 mb-3">
               Service Area
             </h3>
-            <GoogleMapEmbed />
+            <ServiceAreaMap />
           </AnimatedSection>
         </div>
       </section>
