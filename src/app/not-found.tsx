@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import type { Metadata } from "next";
 import { buttonVariants } from "@/lib/button-variants";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Page Not Found — NW Premium Design LLC",
+  description: "The page you're looking for doesn't exist. Browse our kitchen remodeling, cabinet installation, and bathroom remodeling services in Seattle.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

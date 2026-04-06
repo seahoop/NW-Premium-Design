@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/metadata";
+import { buildBreadcrumbSchema, buildItemListSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/constants";
 import { services } from "@/data/services";
 import { ServiceDetailSection } from "@/components/services/ServiceDetailSection";
@@ -24,6 +25,23 @@ const imagePositions = ["left", "right", "left", "right", "left"] as const;
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Services", url: `${SITE_URL}/services` },
+            ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildItemListSchema(services)),
+        }}
+      />
       {/* Page hero */}
       <section className="bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
         <div className="container-site">

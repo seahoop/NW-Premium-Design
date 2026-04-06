@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { buildPageMetadata } from "@/lib/metadata";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 import { SITE_URL, BUSINESS } from "@/lib/constants";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { GoogleMapEmbed } from "@/components/contact/GoogleMapEmbed";
@@ -50,6 +51,17 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Contact", url: `${SITE_URL}/contact` },
+            ])
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
         <div className="container-site">

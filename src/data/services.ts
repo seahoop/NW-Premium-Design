@@ -28,6 +28,24 @@ export const services: Service[] = [
     ctaText: "Get a Kitchen Remodel Estimate",
     featured: true,
     order: 1,
+    faqs: [
+      {
+        question: "How long does a kitchen remodel take in Seattle?",
+        answer: "Most kitchen remodels take 2–4 weeks depending on scope. A simple cabinet replacement may take a few days, while a full gut-and-rebuild with layout changes typically takes 3–4 weeks.",
+      },
+      {
+        question: "Do you handle IKEA kitchen installations?",
+        answer: "Yes — we specialize in IKEA SEKTION cabinet systems. Alex handles the full process including planning, assembly, and precision installation.",
+      },
+      {
+        question: "Can you work with cabinets I've already purchased?",
+        answer: "Absolutely. Whether you've bought IKEA, custom, or semi-custom cabinets, we can install them. We also offer a cabinet supply service if you need help sourcing.",
+      },
+      {
+        question: "Do you offer free kitchen remodel estimates?",
+        answer: "Yes, we provide free in-home estimates for all kitchen remodeling projects across the greater Seattle and Puget Sound area.",
+      },
+    ],
   },
   {
     id: "bathroom-remodel",
@@ -56,6 +74,20 @@ export const services: Service[] = [
     ctaText: "Get a Bathroom Estimate",
     featured: true,
     order: 2,
+    faqs: [
+      {
+        question: "What does a bathroom remodel include?",
+        answer: "Our bathroom remodels can include vanity and cabinet installation, tile work, fixture replacement, wainscoting, and full gut-and-rebuild renovations. We tailor the scope to your needs and budget.",
+      },
+      {
+        question: "Can you make my bathroom ADA-accessible?",
+        answer: "Yes, we offer ADA-friendly bathroom upgrades including grab bar installation, accessible vanity heights, and barrier-free shower modifications.",
+      },
+      {
+        question: "How much does a bathroom remodel cost in Seattle?",
+        answer: "Costs vary based on scope — a vanity swap starts at a lower price point, while a full master bath renovation is a larger investment. Contact us for a free estimate tailored to your project.",
+      },
+    ],
   },
   {
     id: "cabinet-installation",
@@ -84,6 +116,24 @@ export const services: Service[] = [
     ctaText: "Get a Cabinet Install Estimate",
     featured: true,
     order: 3,
+    faqs: [
+      {
+        question: "What types of cabinets do you install?",
+        answer: "We install IKEA SEKTION systems, European frameless cabinets, and fully custom cabinetry. Every install is leveled, plumbed, and built to last.",
+      },
+      {
+        question: "Can you assemble and install IKEA cabinets?",
+        answer: "Yes — IKEA cabinet assembly and installation is one of our core specialties. Alex has deep experience with the IKEA SEKTION system and handles the full process.",
+      },
+      {
+        question: "Do you install soft-close hinges and hardware?",
+        answer: "Yes, we install soft-close hinges, drawer slides, pull-out shelves, organizers, crown molding, and all cabinet hardware as part of our installation service.",
+      },
+      {
+        question: "What areas do you serve for cabinet installation?",
+        answer: "We serve Seattle, Bellevue, Tacoma, Kirkland, Redmond, Renton, Auburn, Kent, and the entire greater Puget Sound area.",
+      },
+    ],
   },
   {
     id: "cabinet-supply",
@@ -112,6 +162,20 @@ export const services: Service[] = [
     ctaText: "Ask About Cabinet Supply",
     featured: true,
     order: 4,
+    faqs: [
+      {
+        question: "Can you help me choose the right cabinets?",
+        answer: "Yes — Alex works with you to understand your budget, style, and space, then sources cabinets from IKEA, semi-custom vendors, or custom cabinet makers to find the best fit.",
+      },
+      {
+        question: "Do you offer supply-and-install packages?",
+        answer: "Yes, we offer full supply-and-install packages. We handle sourcing, delivery coordination, and professional installation — a complete one-stop solution.",
+      },
+      {
+        question: "Is it cheaper to buy cabinets through you?",
+        answer: "We compare prices across multiple suppliers to find the best value for your project. Our sourcing service saves you time and often helps you avoid costly ordering mistakes.",
+      },
+    ],
   },
   {
     id: "interior-repairs",
@@ -140,6 +204,20 @@ export const services: Service[] = [
     ctaText: "Get a Repair Estimate",
     featured: false,
     order: 5,
+    faqs: [
+      {
+        question: "What kind of interior repairs do you handle?",
+        answer: "We handle cabinet door and hinge repairs, drawer slide replacement, water damage restoration, cabinet modification and refacing, countertop edge repair, and general kitchen and bathroom repairs.",
+      },
+      {
+        question: "Do I need a full remodel or just a repair?",
+        answer: "Not every project needs a full remodel. If your cabinets are structurally sound but have damaged doors, worn hardware, or minor water damage, a targeted repair is often the smarter and more affordable solution.",
+      },
+      {
+        question: "Do you offer free estimates for repair work?",
+        answer: "Yes, we provide free in-home estimates for all repair projects. Alex will assess the damage and recommend the most cost-effective solution.",
+      },
+    ],
   },
 ];
 

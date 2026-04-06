@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, ArrowRight, Star, Award, Users, Hammer } from "lucide-react";
 import { buildPageMetadata } from "@/lib/metadata";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 import { SITE_URL, BUSINESS } from "@/lib/constants";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
@@ -59,6 +60,17 @@ const reasons = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "About", url: `${SITE_URL}/about` },
+            ])
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="relative bg-navy pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
         {/* Background image with heavy overlay */}

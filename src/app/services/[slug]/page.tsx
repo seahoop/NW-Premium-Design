@@ -5,7 +5,7 @@ import Link from "next/link";
 import { CheckCircle, ArrowRight, ChevronRight } from "lucide-react";
 import { services, getServiceBySlug } from "@/data/services";
 import { buildPageMetadata } from "@/lib/metadata";
-import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/schema";
+import { buildServiceSchema, buildBreadcrumbSchema, buildFAQSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/constants";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
@@ -61,6 +61,7 @@ export default async function ServicePage({
                 url: `${SITE_URL}/services/${service.slug}`,
               },
             ]),
+            ...(service.faqs.length > 0 ? [buildFAQSchema(service.faqs)] : []),
           ]),
         }}
       />

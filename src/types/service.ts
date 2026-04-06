@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   id: string;
   slug: string;
@@ -14,4 +19,5 @@ export interface Service {
   ctaText: string;
   featured: boolean;
   order: number;
+  faqs: FAQ[];
 }

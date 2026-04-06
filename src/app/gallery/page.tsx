@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/metadata";
+import { buildBreadcrumbSchema } from "@/lib/schema";
 import { SITE_URL } from "@/lib/constants";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { ContactCTA } from "@/components/home/ContactCTA";
@@ -20,6 +21,17 @@ export const metadata: Metadata = buildPageMetadata({
 export default function GalleryPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbSchema([
+              { name: "Home", url: SITE_URL },
+              { name: "Gallery", url: `${SITE_URL}/gallery` },
+            ])
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
         <div className="container-site">

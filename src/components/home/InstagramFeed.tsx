@@ -72,21 +72,21 @@ const INSTAGRAM_POSTS: {
  */
 const GRID_CLASSES = [
   // Item 0: Hero — large featured image, 2x2 on desktop
-  "col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 aspect-square sm:aspect-auto sm:h-full",
+  "col-span-1 row-span-1 aspect-[4/3] sm:col-span-2 sm:row-span-2 sm:aspect-auto sm:h-full",
   // Item 1: Tall portrait on desktop
-  "col-span-1 row-span-1 aspect-[3/4] sm:aspect-[3/4] lg:row-span-2 lg:aspect-auto lg:h-full",
+  "col-span-1 row-span-1 aspect-[4/3] sm:aspect-[3/4] lg:row-span-2 lg:aspect-auto lg:h-full",
   // Item 2: Standard square
-  "col-span-1 row-span-1 aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:aspect-square",
   // Item 3: Wide landscape on tablet+
-  "col-span-1 row-span-1 aspect-square sm:col-span-2 sm:aspect-[16/9] lg:col-span-1 lg:aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:col-span-2 sm:aspect-[16/9] lg:col-span-1 lg:aspect-square",
   // Item 4: Standard
-  "col-span-1 row-span-1 aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:aspect-square",
   // Item 5: Standard
-  "col-span-1 row-span-1 aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:aspect-square",
   // Item 6: Wide on tablet
-  "col-span-1 row-span-1 aspect-square sm:col-span-2 sm:aspect-[16/9] lg:col-span-1 lg:aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:col-span-2 sm:aspect-[16/9] lg:col-span-1 lg:aspect-square",
   // Item 7: Standard
-  "col-span-1 row-span-1 aspect-square",
+  "col-span-1 row-span-1 aspect-[4/3] sm:aspect-square",
 ];
 
 function PostCard({
@@ -194,7 +194,7 @@ export function InstagramFeed() {
 
         {/* Masonry-style post grid */}
         <AnimatedSection delay={0.15}>
-          <div className="grid auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:auto-rows-[minmax(180px,1fr)] lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:auto-rows-[minmax(200px,1fr)] sm:grid-cols-2 sm:gap-4 lg:auto-rows-[minmax(180px,1fr)] lg:grid-cols-4">
             {INSTAGRAM_POSTS.map((post, i) => (
               <div key={`${post.url}-${i}`} className={GRID_CLASSES[i]}>
                 <PostCard post={post} featured={i === 0} />

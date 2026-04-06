@@ -74,7 +74,7 @@ export function HeroSection() {
             href="/contact"
             className={cn(
               buttonVariants({ size: "lg" }),
-              "w-full gap-2 bg-cream text-navy hover:bg-cream-dark sm:w-auto"
+              "w-full gap-2 bg-white text-navy hover:bg-white hover:scale-105 transition-transform sm:w-auto"
             )}
           >
             <Phone className="size-4" />
@@ -84,7 +84,7 @@ export function HeroSection() {
             href="/gallery"
             className={cn(
               buttonVariants({ size: "lg", variant: "outline" }),
-              "w-full bg-transparent border-cream/60 text-cream hover:bg-cream/10 hover:text-cream sm:w-auto"
+              "w-full bg-transparent border-cream/60 text-cream hover:bg-cream/20 hover:text-cream sm:w-auto"
             )}
           >
             See Our Work

@@ -5,7 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { defaultMetadata } from "@/lib/metadata";
-import { buildLocalBusinessSchema } from "@/lib/schema";
+import { buildLocalBusinessSchema, buildWebSiteSchema } from "@/lib/schema";
+import { BUSINESS } from "@/lib/constants";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -31,10 +32,24 @@ export default function RootLayout({
       <head>
         <meta name="color-scheme" content="only light" />
         <meta name="darkreader-lock" />
+        <meta name="geo.region" content={`${BUSINESS.address.country}-${BUSINESS.address.state}`} />
+        <meta name="geo.placename" content={BUSINESS.address.city} />
+        <meta name="geo.position" content={`${BUSINESS.geo.lat};${BUSINESS.geo.lng}`} />
+        <meta name="ICBM" content={`${BUSINESS.geo.lat}, ${BUSINESS.geo.lng}`} />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(buildLocalBusinessSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildWebSiteSchema()),
           }}
         />
       </head>
