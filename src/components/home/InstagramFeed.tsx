@@ -162,11 +162,11 @@ export function InstagramFeed() {
   return (
     <section className="relative overflow-hidden bg-navy py-20 sm:py-24 lg:py-28">
       {/* Subtle Instagram gradient accent along top edge */}
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045]" />
 
       {/* Background texture/glow */}
-      <div className="pointer-events-none absolute -left-40 -top-40 size-96 rounded-full bg-[#833ab4]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-40 -right-40 size-96 rounded-full bg-[#fcb045]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 -top-40 size-96 rounded-full bg-white/[0.03] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-40 size-96 rounded-full bg-white/[0.03] blur-3xl" />
 
       <div className="container-site relative">
         {/* Header */}

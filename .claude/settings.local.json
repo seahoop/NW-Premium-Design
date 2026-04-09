@@ -33,7 +33,24 @@
       "WebSearch",
       "Bash(curl -sL -o public/images/about/alex-work-new.jpg \"https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=85\")",
       "Bash(curl -sL -o public/images/about/alex-portrait.jpg \"https://s3-media0.fl.yelpcdn.com/bphoto/mwTbVQxsScWN1iT7Q8Uz3g/o.jpg\")",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 3060 //F)",
+      "Bash(rm -rf .next/dev/lock)",
+      "Bash(npx next:*)",
+      "Bash(wmic process:*)",
+      "Bash(powershell -c \"Get-Process -Id 36248 | Select-Object ProcessName, Path\" 2>&1)",
+      "Bash(taskkill //PID 36248 //F)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(taskkill //PID 21792 //F)",
+      "Bash(cp \"C:/Users/barit/.claude/image-cache/2b503c76-2d1e-43f6-8cf8-31c62d9472f6/5.png\" \"C:/Users/barit/Desktop/Repos/nwpremiumdesign/public/images/reviews/normajean.png\")",
+      "Bash(cp \"C:/Users/barit/.claude/image-cache/2b503c76-2d1e-43f6-8cf8-31c62d9472f6/6.png\" \"C:/Users/barit/Desktop/Repos/nwpremiumdesign/public/images/reviews/ravi.png\")",
+      "Bash(for f:*)",
+      "Bash(do identify:*)",
+      "Bash(powershell -c \"Get-ChildItem 'C:\\\\Users\\\\barit\\\\Desktop\\\\Repos\\\\nwpremiumdesign\\\\public\\\\images\\\\gallery\\\\kitchens\\\\' | ForEach-Object { '{0} {1}KB' -f $_.Name, [math]::Round\\($_.Length/1KB\\) }\")",
+      "Bash(npm install:*)",
+      "Bash(ls:*)",
+      "mcp__claude_ai_Canva__generate-design"
     ]
   }
 }

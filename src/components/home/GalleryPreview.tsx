@@ -19,7 +19,7 @@ export function GalleryPreview() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featuredGalleryItems.map((item, i) => (
-            <AnimatedSection key={item.id} delay={i * 0.08} direction="up">
+            <AnimatedSection key={item.id} delay={i * 0.08} variant="image">
               <Link
                 href="/gallery"
                 className="group relative block overflow-hidden rounded-xl bg-cream-darker aspect-[4/3]"
@@ -31,7 +31,7 @@ export function GalleryPreview() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
                   <p className="text-sm font-semibold text-cream">
                     {item.projectTitle}

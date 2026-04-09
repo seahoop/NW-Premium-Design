@@ -20,7 +20,7 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled || !isHomePage
-          ? "bg-cream/95 shadow-sm backdrop-blur-sm"
+          ? "bg-white/95 shadow-sm backdrop-blur-md"
           : "bg-transparent"
       )}
     >
@@ -66,8 +66,8 @@ export function Header() {
                       ? "bg-navy text-cream"
                       : "text-navy hover:bg-cream-dark"
                     : isActive
-                    ? "bg-cream/20 text-cream"
-                    : "text-cream/90 hover:text-cream hover:bg-cream/10"
+                    ? "bg-white/20 text-white"
+                    : "text-white/90 hover:text-white hover:bg-white/10"
                 )}
               >
                 {link.label}
@@ -87,7 +87,7 @@ export function Header() {
               }),
               "hidden gap-2 sm:flex",
               !(scrolled || !isHomePage) &&
-                "bg-transparent border-cream/60 text-cream hover:bg-cream hover:text-navy"
+                "bg-transparent border-white/40 text-white hover:bg-white hover:text-navy"
             )}
           >
             <Phone className="size-3.5" />

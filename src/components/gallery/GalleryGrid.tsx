@@ -45,9 +45,9 @@ export function GalleryGrid() {
               )}
               onClick={() => handleOpen(i)}
               aria-label={`View ${item.projectTitle}`}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.04, duration: 0.35 }}
+              initial={{ opacity: 0, scale: 0.92, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: i * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <Image
                 src={item.src}
@@ -57,7 +57,7 @@ export function GalleryGrid() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute inset-0 flex flex-col items-start justify-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p className="text-xs font-semibold text-cream leading-tight">
                   {item.projectTitle}

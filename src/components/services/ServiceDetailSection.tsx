@@ -28,7 +28,7 @@ export function ServiceDetailSection({
         >
           {/* Image */}
           <AnimatedSection
-            direction={imageFirst ? "left" : "right"}
+            variant="image"
             className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-cream-dark shadow-lg"
           >
             <Image
@@ -42,7 +42,7 @@ export function ServiceDetailSection({
 
           {/* Content */}
           <AnimatedSection direction={imageFirst ? "right" : "left"}>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-navy-light">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-navy/50">
               {`0${service.order}`.slice(-2)}
             </p>
             <h2 className="font-serif text-2xl font-semibold text-navy sm:text-3xl">

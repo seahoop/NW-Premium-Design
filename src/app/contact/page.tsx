@@ -119,7 +119,7 @@ export default function ContactPage() {
                             href={href}
                             target={external ? "_blank" : undefined}
                             rel={external ? "noopener noreferrer" : undefined}
-                            className="text-sm font-medium text-navy hover:text-navy-light transition-colors"
+                            className="text-sm font-medium text-navy hover:text-navy/70 transition-colors"
                           >
                             {value}
                           </a>

@@ -32,11 +32,11 @@ export function ServicesGrid() {
               <AnimatedSection
                 key={service.id}
                 delay={i * 0.1}
-                direction="up"
+                variant="image"
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group flex h-full flex-col rounded-2xl bg-white shadow-[0_2px_16px_rgba(26,39,68,0.07)] transition-shadow duration-300 hover:shadow-[0_8px_32px_rgba(26,39,68,0.14)] overflow-hidden"
+                  className="group flex h-full flex-col rounded-2xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1 overflow-hidden"
                 >
                   {/* Service image */}
                   <div className="relative h-48 overflow-hidden bg-cream-dark">
@@ -47,7 +47,7 @@ export function ServicesGrid() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/20 transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                     <div className="absolute top-3 left-3 flex size-9 items-center justify-center rounded-full bg-cream/90">
                       <Icon className="size-4 text-navy" />
                     </div>

@@ -31,7 +31,7 @@ export function HeroSection() {
       style={{ backgroundImage: "url('/images/hero/hero-kitchen.jpg')" }}
     >
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/60 to-navy/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70" />
 
       {/* Content */}
       <motion.div
@@ -42,24 +42,24 @@ export function HeroSection() {
       >
         <motion.p
           variants={itemVariants}
-          className="mb-4 text-sm font-semibold uppercase tracking-widest text-cream/75"
+          className="mb-4 text-sm font-semibold uppercase tracking-widest text-white/70"
         >
           Seattle&apos;s Premier Remodeling Contractor
         </motion.p>
 
         <motion.h1
           variants={itemVariants}
-          className="text-balance font-serif text-4xl font-semibold leading-tight text-cream sm:text-5xl lg:text-6xl"
+          className="text-balance font-serif text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
           Cabinet Installation &amp;
           <br className="hidden sm:block" /> Kitchen Remodeling
           <br />
-          <span className="text-cream/80">Done Right</span>
+          <span className="text-white/80">Done Right</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg"
+          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
         >
           NW Premium Design LLC — serving Seattle and the greater Puget Sound.
           IKEA, European, and custom cabinets. Kitchen &amp; bathroom remodels.
@@ -84,7 +84,7 @@ export function HeroSection() {
             href="/gallery"
             className={cn(
               buttonVariants({ size: "lg", variant: "outline" }),
-              "w-full bg-transparent border-cream/60 text-cream hover:bg-cream/20 hover:text-cream sm:w-auto"
+              "w-full bg-transparent border-white/40 text-white hover:bg-white/10 hover:text-white sm:w-auto"
             )}
           >
             See Our Work
@@ -94,7 +94,7 @@ export function HeroSection() {
         {/* Google rating badge */}
         <motion.div
           variants={itemVariants}
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 backdrop-blur-sm"
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
         >
           <div className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -107,8 +107,8 @@ export function HeroSection() {
               </svg>
             ))}
           </div>
-          <span className="text-sm font-semibold text-cream">5.0</span>
-          <span className="text-sm text-cream/70">Google Reviews</span>
+          <span className="text-sm font-semibold text-white">5.0</span>
+          <span className="text-sm text-white/70">Google Reviews</span>
         </motion.div>
       </motion.div>
 
@@ -123,7 +123,7 @@ export function HeroSection() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
         >
-          <ChevronDown className="size-7 text-cream/50" />
+          <ChevronDown className="size-7 text-white/50" />
         </motion.div>
       </motion.div>
     </section>
