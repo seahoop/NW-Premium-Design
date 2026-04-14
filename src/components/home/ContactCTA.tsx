@@ -45,8 +45,8 @@ export function ContactCTA() {
           </div>
 
           <p className="mt-5 text-sm text-cream/45">
-            We typically respond within 24 hours. Free estimates, no
-            commitment required.
+            Text your plans, photos, and measurements to Alex for a fast
+            one-day quote.
           </p>
         </AnimatedSection>
       </div>

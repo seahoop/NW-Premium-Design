@@ -50,12 +50,12 @@ export default function ServicesPage() {
               What We Offer
             </p>
             <h1 className="font-serif text-4xl font-semibold text-cream text-balance sm:text-5xl">
-              Our Services
+              Cabinet Installation, Remodeling & Specialty Work
             </h1>
             <p className="mt-4 text-base leading-relaxed text-cream/70 sm:text-lg max-w-xl">
-              From a single cabinet repair to a complete kitchen transformation
-              — NW Premium Design LLC delivers quality craftsmanship throughout
-              the greater Seattle area.
+              Alex specializes in cabinet installation first, then builds full
+              kitchen, bathroom, and interior projects around that same precise
+              finish quality across the Seattle area.
             </p>
           </AnimatedSection>
         </div>

@@ -44,7 +44,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="mb-4 text-sm font-semibold uppercase tracking-widest text-white/70"
         >
-          Seattle&apos;s Premier Remodeling Contractor
+          Seattle Area Cabinet Installation Services
         </motion.p>
 
         <motion.h1
@@ -78,7 +78,7 @@ export function HeroSection() {
             )}
           >
             <Phone className="size-4" />
-            Get a Free Estimate
+            Text for Free Estimate
           </Link>
           <Link
             href="/gallery"

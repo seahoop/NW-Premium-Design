@@ -89,6 +89,24 @@ export default function ContactPage() {
               direction="left"
               className="lg:col-span-3 h-fit rounded-2xl bg-white p-6 shadow-sm sm:p-8"
             >
+              <div className="mb-6 rounded-2xl border border-navy/10 bg-cream px-5 py-5">
+                <p className="text-sm font-semibold uppercase tracking-widest text-navy/50">
+                  Free Quote By Text
+                </p>
+                <h2 className="mt-2 font-serif text-2xl font-semibold text-navy">
+                  Alex is usually on the jobsite
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-navy/70">
+                  For free quotes, text{" "}
+                  <a
+                    href="sms:+12538869342"
+                    className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+                  >
+                    (253) 886-9342
+                  </a>
+                  . Fast one-day quote. Send your design and your requirements.
+                </p>
+              </div>
               <h2 className="font-serif text-2xl font-semibold text-navy mb-1">
                 Send a Message
               </h2>

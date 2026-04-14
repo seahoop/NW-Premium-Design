@@ -64,6 +64,9 @@ const CONTROL_POINTS: [number, number][] = [
 
   // South
   [47.16, -122.22], // Bonney Lake / Puyallup
+  [47.08, -122.36], // Graham
+  [47.06, -122.58], // Fort Lewis
+  [46.98, -122.92], // Olympia
   [47.16, -122.50], // Lakewood
 
   // Southwest
@@ -90,8 +93,8 @@ export default function ServiceAreaMapInner() {
     if (!mapRef.current || mapInstanceRef.current) return;
 
     const map = L.map(mapRef.current, {
-      center: [47.45, -122.22],
-      zoom: 9,
+      center: [47.34, -122.34],
+      zoom: 8,
       scrollWheelZoom: false,
       attributionControl: true,
       zoomControl: true,

@@ -45,6 +45,11 @@ export function ServiceDetailSection({
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-navy/50">
               {`0${service.order}`.slice(-2)}
             </p>
+            {service.slug === "cabinet-installation" ? (
+              <div className="mb-3 inline-flex items-center rounded-full border border-amber-300/30 bg-amber-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
+                Alex&apos;s Specialty
+              </div>
+            ) : null}
             <h2 className="font-serif text-2xl font-semibold text-navy sm:text-3xl">
               {service.title}
             </h2>

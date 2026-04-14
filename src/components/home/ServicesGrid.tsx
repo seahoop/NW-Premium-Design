@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ChefHat, Bath, Package, Truck, Wrench } from "lucide-react";
 import { featuredServices } from "@/data/services";
 import { SectionHeader } from "@/components/shared/SectionHeader";
@@ -14,30 +17,69 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export function ServicesGrid() {
+  const shouldReduceMotion = useReducedMotion();
+
+  const gridVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.16,
+        delayChildren: shouldReduceMotion ? 0 : 0.08,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 28,
+      scale: shouldReduceMotion ? 1 : 0.96,
+      filter: shouldReduceMotion ? "none" : "blur(8px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: shouldReduceMotion ? 0.25 : 0.75,
+        ease: [0.16, 1, 0.3, 1] as const,
+      },
+    },
+  };
+
   return (
-    <section className="section-padding bg-cream">
+    <section className="section-padding bg-navy-dark">
       <div className="container-site">
         <AnimatedSection>
           <SectionHeader
             eyebrow="What We Do"
             title="Full-Service Remodeling & Cabinetry"
             subtitle="From IKEA assembly to full kitchen renovations — we handle it all with the same precision and care."
+            light
           />
         </AnimatedSection>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredServices.map((service, i) => {
+        <motion.div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.35 }}
+        >
+          {featuredServices.map((service) => {
             const Icon = ICONS[service.icon] ?? Package;
             return (
-              <AnimatedSection
+              <motion.div
                 key={service.id}
-                delay={i * 0.1}
-                variant="image"
+                variants={cardVariants}
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group flex h-full flex-col rounded-2xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1 overflow-hidden"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/8 bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-1.5 hover:border-navy/15 hover:shadow-[0_18px_48px_rgba(15,23,42,0.14)]"
                 >
+                  <div className="h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-[#d8c3a5] via-[#6d7b8d] to-[#111827] transition-transform duration-500 group-hover:scale-x-100" />
+
                   {/* Service image */}
                   <div className="relative h-48 overflow-hidden bg-cream-dark">
                     <Image
@@ -47,9 +89,9 @@ export function ServicesGrid() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-                    <div className="absolute top-3 left-3 flex size-9 items-center justify-center rounded-full bg-cream/90">
-                      <Icon className="size-4 text-navy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                    <div className="absolute top-3 left-3 flex size-10 items-center justify-center rounded-full border border-white/60 bg-white/85 backdrop-blur-sm">
+                      <Icon className="size-4 text-navy transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
                     </div>
                   </div>
 
@@ -67,15 +109,15 @@ export function ServicesGrid() {
                     </div>
                   </div>
                 </Link>
-              </AnimatedSection>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         <AnimatedSection delay={0.4} className="mt-10 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-navy px-7 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-cream"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-cream/25 px-7 py-3 text-sm font-semibold text-cream transition-colors hover:bg-cream hover:text-navy"
           >
             View All Services
             <ArrowRight className="size-4" />
