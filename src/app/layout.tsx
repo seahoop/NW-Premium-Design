@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
-        <meta name="color-scheme" content="only light" />
+        <meta name="color-scheme" content="dark" />
         <meta name="darkreader-lock" />
         <meta name="geo.region" content={`${BUSINESS.address.country}-${BUSINESS.address.state}`} />
         <meta name="geo.placename" content={BUSINESS.address.city} />

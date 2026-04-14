@@ -54,51 +54,46 @@
 
 /* ─── Brand-overridden shadcn/ui CSS variables ─── */
 :root {
-  /* Background: near-white | Foreground: near-black */
-  --background: oklch(0.985 0.002 90);
-  --foreground: oklch(0.15 0.005 260);
+  --background: oklch(0.08 0.005 260);
+  --foreground: oklch(0.96 0.004 95);
 
-  --card: oklch(1.0 0 0);
-  --card-foreground: oklch(0.15 0.005 260);
+  --card: oklch(0.11 0.006 255);
+  --card-foreground: oklch(0.96 0.004 95);
 
-  --popover: oklch(1.0 0 0);
-  --popover-foreground: oklch(0.15 0.005 260);
+  --popover: oklch(0.10 0.006 255);
+  --popover-foreground: oklch(0.96 0.004 95);
 
-  /* Primary = near-black */
-  --primary: oklch(0.15 0.005 260);
-  --primary-foreground: oklch(0.985 0.002 90);
+  --primary: oklch(0.16 0.008 255);
+  --primary-foreground: oklch(0.96 0.004 95);
 
-  /* Secondary = light gray */
-  --secondary: oklch(0.955 0.003 90);
-  --secondary-foreground: oklch(0.15 0.005 260);
+  --secondary: oklch(0.13 0.008 255);
+  --secondary-foreground: oklch(0.96 0.004 95);
 
-  /* Muted = soft gray */
-  --muted: oklch(0.955 0.003 90);
-  --muted-foreground: oklch(0.45 0.01 260);
+  --muted: oklch(0.12 0.006 255);
+  --muted-foreground: oklch(0.76 0.008 95);
 
-  /* Accent = dark gray */
-  --accent: oklch(0.25 0.005 260);
-  --accent-foreground: oklch(0.985 0.002 90);
+  --accent: oklch(0.18 0.008 255);
+  --accent-foreground: oklch(0.96 0.004 95);
 
   --destructive: oklch(0.58 0.22 27);
 
-  --border: oklch(0.90 0.004 90);
-  --input: oklch(0.90 0.004 90);
-  --ring: oklch(0.15 0.005 260);
+  --border: oklch(0.22 0.008 255);
+  --input: oklch(0.18 0.008 255);
+  --ring: oklch(0.72 0.01 90);
 
   --radius: 0.625rem;
 
-  --sidebar: oklch(0.15 0.005 260);
-  --sidebar-foreground: oklch(0.985 0.002 90);
-  --sidebar-primary: oklch(0.25 0.005 260);
-  --sidebar-primary-foreground: oklch(0.985 0.002 90);
-  --sidebar-accent: oklch(0.25 0.005 260);
-  --sidebar-accent-foreground: oklch(0.985 0.002 90);
-  --sidebar-border: oklch(0.25 0.005 260);
-  --sidebar-ring: oklch(0.45 0.01 260);
+  --sidebar: oklch(0.08 0.005 260);
+  --sidebar-foreground: oklch(0.96 0.004 95);
+  --sidebar-primary: oklch(0.14 0.008 255);
+  --sidebar-primary-foreground: oklch(0.96 0.004 95);
+  --sidebar-accent: oklch(0.18 0.008 255);
+  --sidebar-accent-foreground: oklch(0.96 0.004 95);
+  --sidebar-border: oklch(0.22 0.008 255);
+  --sidebar-ring: oklch(0.72 0.01 90);
 }
 
-/* No dark mode — this is a client-facing business site */
+/* Site is intentionally dark themed */
 
 @layer base {
   * {
@@ -106,7 +101,7 @@
   }
   html {
     @apply font-sans scroll-smooth;
-    color-scheme: only light;
+    color-scheme: dark;
   }
   body {
     @apply bg-background text-foreground antialiased;
@@ -131,5 +126,121 @@
   }
   .section-padding {
     @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .bg-white {
+    background-color: oklch(0.11 0.006 255) !important;
+  }
+  .bg-cream {
+    background-color: oklch(0.07 0.005 255) !important;
+  }
+  .bg-cream-dark {
+    background-color: oklch(0.11 0.006 255) !important;
+  }
+  .bg-cream-darker {
+    background-color: oklch(0.16 0.008 255) !important;
+  }
+  .bg-navy {
+    background-color: oklch(0.06 0.005 255) !important;
+  }
+  .bg-navy-light {
+    background-color: oklch(0.12 0.008 255) !important;
+  }
+  .bg-navy-dark {
+    background-color: oklch(0.04 0.004 255) !important;
+  }
+
+  .text-navy,
+  .text-cream {
+    color: oklch(0.96 0.004 95) !important;
+  }
+  .text-navy\/45,
+  .text-cream\/45 {
+    color: rgb(245 245 245 / 0.45) !important;
+  }
+  .text-navy\/50,
+  .text-cream\/50 {
+    color: rgb(245 245 245 / 0.5) !important;
+  }
+  .text-navy\/55,
+  .text-cream\/55 {
+    color: rgb(245 245 245 / 0.55) !important;
+  }
+  .text-navy\/60,
+  .text-cream\/60 {
+    color: rgb(245 245 245 / 0.6) !important;
+  }
+  .text-navy\/65,
+  .text-cream\/65 {
+    color: rgb(245 245 245 / 0.65) !important;
+  }
+  .text-navy\/70,
+  .text-cream\/70 {
+    color: rgb(245 245 245 / 0.7) !important;
+  }
+  .text-navy\/75,
+  .text-cream\/75 {
+    color: rgb(245 245 245 / 0.75) !important;
+  }
+  .text-navy\/80,
+  .text-cream\/80 {
+    color: rgb(245 245 245 / 0.8) !important;
+  }
+  .text-cream\/40 {
+    color: rgb(245 245 245 / 0.4) !important;
+  }
+  .text-cream\/90 {
+    color: rgb(245 245 245 / 0.9) !important;
+  }
+
+  .border-cream,
+  .border-cream-dark,
+  .border-cream-darker,
+  .border-navy,
+  .border-border {
+    border-color: rgb(255 255 255 / 0.14) !important;
+  }
+  .border-navy\/8 {
+    border-color: rgb(255 255 255 / 0.08) !important;
+  }
+  .border-navy\/10,
+  .border-cream\/10 {
+    border-color: rgb(255 255 255 / 0.1) !important;
+  }
+  .border-navy\/15 {
+    border-color: rgb(255 255 255 / 0.15) !important;
+  }
+  .border-navy\/20 {
+    border-color: rgb(255 255 255 / 0.2) !important;
+  }
+  .border-navy\/25,
+  .border-cream\/25 {
+    border-color: rgb(255 255 255 / 0.25) !important;
+  }
+  .border-navy\/30 {
+    border-color: rgb(255 255 255 / 0.3) !important;
+  }
+  .border-cream\/40 {
+    border-color: rgb(255 255 255 / 0.4) !important;
+  }
+  .border-white\/60 {
+    border-color: rgb(255 255 255 / 0.25) !important;
+  }
+
+  .hover\:bg-cream:hover,
+  .hover\:bg-cream-dark:hover,
+  .hover\:bg-white:hover {
+    background-color: oklch(0.16 0.008 255) !important;
+  }
+  .hover\:bg-navy:hover,
+  .hover\:bg-navy-light:hover {
+    background-color: oklch(0.18 0.01 255) !important;
+  }
+  .hover\:text-navy:hover,
+  .hover\:text-cream:hover {
+    color: oklch(0.98 0.004 95) !important;
+  }
+  .hover\:border-navy\/30:hover {
+    border-color: rgb(255 255 255 / 0.3) !important;
   }
 }
