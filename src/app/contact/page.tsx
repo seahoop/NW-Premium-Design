@@ -89,18 +89,18 @@ export default function ContactPage() {
               direction="left"
               className="lg:col-span-3 h-fit rounded-2xl bg-white p-6 shadow-sm sm:p-8"
             >
-              <div className="mb-6 rounded-2xl border border-navy/10 bg-cream px-5 py-5">
-                <p className="text-sm font-semibold uppercase tracking-widest text-navy/50">
+              <div className="mb-8 rounded-3xl border border-white/20 bg-gradient-to-br from-[#2b2b2b] via-[#232323] to-[#181818] px-6 py-6 shadow-[0_18px_50px_rgba(0,0,0,0.28)] ring-1 ring-white/6 sm:px-7">
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/75">
                   Free Quote By Text
                 </p>
-                <h2 className="mt-2 font-serif text-2xl font-semibold text-navy">
+                <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
                   Alex is usually on the jobsite
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-navy/70">
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/88 sm:text-lg">
                   For free quotes, text{" "}
                   <a
                     href="sms:+12538869342"
-                    className="font-semibold text-navy underline decoration-navy/30 underline-offset-4"
+                    className="font-extrabold text-white underline decoration-white/40 underline-offset-4"
                   >
                     (253) 886-9342
                   </a>

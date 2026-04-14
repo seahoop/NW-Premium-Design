@@ -22,14 +22,14 @@ export function MobileMenu() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
-        className="flex items-center justify-center rounded-md p-2 text-navy transition-colors hover:bg-cream-dark lg:hidden"
+        className="flex items-center justify-center rounded-md p-2 text-white transition-colors hover:bg-white/10 lg:hidden"
         aria-label="Open navigation menu"
       >
         <Menu className="size-6" />
       </SheetTrigger>
-      <SheetContent side="right" className="bg-cream w-80 border-cream-darker px-0">
-        <SheetHeader className="border-b border-cream-darker px-6 pb-4">
-          <SheetTitle className="text-left font-serif text-lg text-navy">
+      <SheetContent side="right" className="w-80 border-white/10 bg-black px-0 text-white">
+        <SheetHeader className="border-b border-white/10 px-6 pb-4">
+          <SheetTitle className="text-left font-serif text-lg text-white">
             NW Premium Design
           </SheetTitle>
         </SheetHeader>
@@ -47,8 +47,8 @@ export function MobileMenu() {
                 className={cn(
                   "rounded-md px-4 py-3 text-base font-medium transition-colors",
                   isActive
-                    ? "bg-navy text-cream"
-                    : "text-navy hover:bg-cream-dark"
+                    ? "bg-white text-black"
+                    : "text-white/85 hover:bg-white/10 hover:text-white"
                 )}
               >
                 {link.label}
@@ -56,15 +56,18 @@ export function MobileMenu() {
             );
           })}
         </nav>
-        <div className="border-t border-cream-darker px-6 pt-6">
+        <div className="border-t border-white/10 px-6 pt-6">
           <a
             href={`tel:${BUSINESS.phone}`}
-            className={cn(buttonVariants({ size: "lg" }), "w-full gap-2")}
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "w-full gap-2 bg-white text-black hover:bg-white/90"
+            )}
           >
             <Phone className="size-4" />
             {BUSINESS.phoneDisplay}
           </a>
-          <p className="mt-3 text-center text-xs text-navy/50">
+          <p className="mt-3 text-center text-xs text-white/50">
             Free estimates · No obligation
           </p>
         </div>
