@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const HERO_VIDEO =
+  "/Home%20Page%20Background%20Lnading%20Page%20Video.mp4";
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -27,13 +30,21 @@ export function HeroSection() {
     <section
       role="img"
       aria-label="Beautiful kitchen remodel by NW Premium Design"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/hero/hero-kitchen.jpg')" }}
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
     >
-      {/* Gradient overlay */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src={HERO_VIDEO} type="video/mp4" />
+      </video>
+
       <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70" />
 
-      {/* Content */}
       <motion.div
         className="container-site relative z-10 py-32 text-center"
         variants={containerVariants}
@@ -59,27 +70,26 @@ export function HeroSection() {
 
         <motion.p
           variants={itemVariants}
-          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl"
         >
-          NW Premium Design LLC — serving Seattle and the greater Puget Sound.
-          IKEA, European, and custom cabinets. Kitchen &amp; bathroom remodels.
-          Honest pricing, expert craftsmanship.
+          NW Premium Design delivers kitchen remodels, cabinet installs, and
+          finish work with careful craftsmanship from start to final detail.
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Link
-            href="/contact"
+          <a
+            href="sms:+12538869342"
             className={cn(
               buttonVariants({ size: "lg" }),
               "w-full gap-2 bg-white text-navy hover:bg-white hover:scale-105 transition-transform sm:w-auto"
             )}
           >
             <Phone className="size-4" />
-            Text for Free Estimate
-          </Link>
+            Text for Estimate
+          </a>
           <Link
             href="/gallery"
             className={cn(
@@ -91,7 +101,6 @@ export function HeroSection() {
           </Link>
         </motion.div>
 
-        {/* Google rating badge */}
         <motion.div
           variants={itemVariants}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
@@ -112,7 +121,6 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0, y: -8 }}

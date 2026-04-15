@@ -43,16 +43,32 @@ export default function ServicesPage() {
         }}
       />
       {/* Page hero */}
-      <section className="bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
-        <div className="container-site">
-          <AnimatedSection className="max-w-2xl">
+      <section className="relative overflow-hidden bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('/Services%20Page%20Background%20Landing%20Page.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="pointer-events-none absolute -left-24 top-10 size-72 rounded-full bg-black/30 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-24 size-80 rounded-full bg-amber-300/8 blur-3xl" />
+
+        <div className="container-site relative">
+          <AnimatedSection className="max-w-2xl" once={false}>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cream/55">
               What We Offer
             </p>
-            <h1 className="font-serif text-4xl font-semibold text-cream text-balance sm:text-5xl">
+          </AnimatedSection>
+          <AnimatedSection className="max-w-4xl" delay={0.08} once={false}>
+            <h1 className="font-serif text-4xl font-semibold text-cream text-balance sm:text-5xl lg:text-6xl">
               Cabinet Installation, Remodeling & Specialty Work
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-cream/70 sm:text-lg max-w-xl">
+          </AnimatedSection>
+          <AnimatedSection className="max-w-xl" delay={0.16} once={false}>
+            <p className="mt-4 text-base leading-relaxed text-cream/70 sm:text-lg">
               Alex specializes in cabinet installation first, then builds full
               kitchen, bathroom, and interior projects around that same precise
               finish quality across the Seattle area.

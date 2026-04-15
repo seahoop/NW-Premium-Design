@@ -65,12 +65,17 @@ function ReviewCard({
   index: number;
 }) {
   return (
-    <AnimatedSection delay={index * 0.1}>
+    <AnimatedSection
+      delay={0.08 + index * 0.08}
+      amount={0.22}
+      once={false}
+      variant="image"
+    >
       <a
         href={yelpUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block h-full rounded-xl border border-cream-dark bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#FF1A1A]/20 hover:-translate-y-0.5"
+        className="group block h-full rounded-2xl border border-cream-dark bg-white/98 p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-[#FF1A1A]/20 hover:shadow-[0_18px_40px_rgba(15,23,42,0.12)]"
       >
         {/* Header: name + Yelp logo */}
         <div className="mb-3 flex items-center justify-between">
@@ -86,13 +91,13 @@ function ReviewCard({
                 />
               </div>
             ) : (
-              <div className="flex size-10 items-center justify-center rounded-full bg-navy text-sm font-semibold text-cream">
+              <div className="flex size-10 items-center justify-center rounded-full bg-[#111827] text-sm font-semibold text-white">
                 {name.charAt(0)}
               </div>
             )}
             <div>
-              <p className="text-sm font-semibold text-navy">{name}</p>
-              <p className="text-xs text-navy/50">{date}</p>
+              <p className="text-sm font-semibold text-[#101828]">{name}</p>
+              <p className="text-xs text-[#667085]">{date}</p>
             </div>
           </div>
           <YelpLogo />
@@ -104,7 +109,7 @@ function ReviewCard({
         </div>
 
         {/* Review text */}
-        <p className="text-sm leading-relaxed text-navy/75">{text}</p>
+        <p className="text-sm leading-relaxed text-[#344054]">{text}</p>
 
         {/* Read on Yelp link */}
         <p className="mt-4 text-xs font-medium text-[#FF1A1A] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -126,7 +131,7 @@ export function YelpReviews() {
         />
 
         {/* Yelp rating summary */}
-        <AnimatedSection>
+        <AnimatedSection once={false}>
           <a
             href={YELP_PAGE_URL}
             target="_blank"

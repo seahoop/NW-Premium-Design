@@ -9,11 +9,26 @@ export const defaultMetadata: Metadata = {
     template: "%s | NW Premium Design LLC",
   },
   description:
-    "Seattle's trusted cabinet installer and kitchen remodeler serving Bellevue, Tacoma, Kirkland, Redmond, Renton, Auburn, Kent & the greater Puget Sound area. IKEA, European & custom cabinets. Free estimates.",
+    "NW Premium Design LLC provides kitchen cabinet installation, IKEA cabinet assembly, European cabinet installation, demolition, and kitchen remodeling in Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Sammamish, Federal Way, Auburn, and the greater Puget Sound area.",
   keywords: [
     "cabinet installer Seattle",
+    "kitchen cabinet installation Seattle",
+    "kitchen cabinet installer Seattle",
+    "kitchen cabinet installation Bellevue",
+    "kitchen cabinet installation Kirkland",
+    "kitchen cabinet installation Renton",
+    "kitchen cabinet installation Tacoma",
+    "kitchen cabinet installation Burien",
+    "kitchen cabinet installation Federal Way",
+    "kitchen cabinet installation Auburn",
     "kitchen remodeler Seattle",
     "IKEA cabinet installation Seattle",
+    "IKEA cabinet assembly Seattle",
+    "IKEA kitchen cabinet installer Seattle",
+    "European cabinet installation Seattle",
+    "European cabinet installer Seattle",
+    "demolition contractor Seattle",
+    "kitchen demolition Seattle",
     "kitchen remodel Seattle WA",
     "bathroom remodel Seattle",
     "cabinet installer near me",
@@ -38,6 +53,9 @@ export const defaultMetadata: Metadata = {
     "kitchen renovation Issaquah",
     "remodeling contractor Puget Sound",
     "kitchen cabinet installer greater Seattle area",
+    "IKEA cabinet installer Bellevue",
+    "European cabinet installation Bellevue",
+    "kitchen demolition Bellevue",
   ],
   authors: [{ name: "NW Premium Design LLC" }],
   creator: "NW Premium Design LLC",
@@ -54,7 +72,7 @@ export const defaultMetadata: Metadata = {
     title:
       "NW Premium Design LLC | Cabinet Installer & Kitchen Remodeler Seattle",
     description:
-      "Seattle & greater Puget Sound's trusted cabinet installer and kitchen remodeler. Serving Bellevue, Tacoma, Kirkland, Redmond & more. Free estimates.",
+      "Kitchen cabinet installation, IKEA cabinet assembly, European cabinet installation, and demolition across Seattle, Bellevue, Kirkland, Renton, Tacoma, and nearby Puget Sound cities.",
     images: [
       {
         url: "/og-image.jpg",
@@ -68,7 +86,7 @@ export const defaultMetadata: Metadata = {
     card: "summary_large_image",
     title: "NW Premium Design LLC | Seattle Cabinet Installer",
     description:
-      "Seattle's trusted cabinet installer and kitchen remodeler. Free estimates.",
+      "Seattle kitchen cabinet installation, IKEA assembly, European cabinet installs, and demolition. Free estimates.",
     images: ["/og-image.jpg"],
   },
   alternates: {

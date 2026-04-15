@@ -6,9 +6,9 @@ export const services: Service[] = [
     slug: "cabinet-installation",
     title: "Cabinet Installation",
     shortTitle: "Cabinets",
-    tagline: "Alex's specialty: precision cabinet installation across the Seattle area",
+    tagline: "Alex's specialty: kitchen cabinet installation, IKEA assembly, and European cabinet installs across Seattle and nearby cities",
     description: [
-      "Cabinet installation is Alex's specialty and the service NW Premium Design LLC is known for most. From IKEA systems to European and custom cabinetry, Alex handles the details that make a finished installation look sharp and function correctly.",
+      "Cabinet installation is Alex's specialty and the service NW Premium Design LLC is known for most. From IKEA systems to European and custom cabinetry, Alex handles the details that make a finished installation look sharp and function correctly across Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina, Sammamish, Federal Way, and Auburn.",
       "Whether you need a full kitchen install, built-in storage, or cabinet replacement in a single room, you get precise layout, clean lines, and finish work that holds up over time.",
     ],
     highlights: [
@@ -24,7 +24,7 @@ export const services: Service[] = [
     icon: "Package",
     seoTitle: "Cabinet Installation Seattle & Greater Puget Sound | NW Premium Design LLC",
     seoDescription:
-      "Alex specializes in cabinet installation for IKEA, European, and custom cabinetry across Seattle, Tacoma, Olympia, Graham, Fort Lewis, and the greater Puget Sound area.",
+      "Alex specializes in kitchen cabinet installation, IKEA cabinet assembly, and European cabinet installation across Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina, Sammamish, Federal Way, Auburn, and the greater Puget Sound area.",
     ctaText: "Get a Cabinet Installation Quote",
     featured: true,
     order: 1,
@@ -112,7 +112,7 @@ export const services: Service[] = [
     icon: "ChefHat",
     seoTitle: "Kitchen Remodeling Seattle & Greater Puget Sound | NW Premium Design LLC",
     seoDescription:
-      "Expert kitchen remodeling in Seattle, Bellevue, Tacoma, Kirkland, Olympia, Graham, and the greater Puget Sound area.",
+      "Expert kitchen remodeling and demolition in Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Sammamish, Federal Way, Auburn, and the greater Puget Sound area.",
     ctaText: "Get a Kitchen Remodel Estimate",
     featured: true,
     order: 3,

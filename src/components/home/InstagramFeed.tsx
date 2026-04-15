@@ -193,12 +193,19 @@ export function InstagramFeed() {
         </AnimatedSection>
 
         {/* Masonry-style post grid */}
-        <AnimatedSection delay={0.15}>
+        <AnimatedSection delay={0.15} once={false}>
           <div className="grid grid-cols-1 gap-3 sm:auto-rows-[minmax(200px,1fr)] sm:grid-cols-2 sm:gap-4 lg:auto-rows-[minmax(180px,1fr)] lg:grid-cols-4">
             {INSTAGRAM_POSTS.map((post, i) => (
-              <div key={`${post.url}-${i}`} className={GRID_CLASSES[i]}>
+              <AnimatedSection
+                key={`${post.url}-${i}`}
+                className={GRID_CLASSES[i]}
+                delay={0.08 + i * 0.06}
+                amount={0.22}
+                once={false}
+                variant="image"
+              >
                 <PostCard post={post} featured={i === 0} />
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </AnimatedSection>

@@ -18,21 +18,16 @@ export function Header() {
     >
       <div className="container-site flex h-16 items-center justify-between sm:h-18">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="relative size-10 overflow-hidden rounded-lg bg-white/5 shadow-sm ring-1 ring-white/10">
+        <Link href="/" className="flex shrink-0 items-center">
+          <div className="relative h-16 w-[108px] overflow-hidden rounded-2xl bg-white/[0.06] p-1.5 shadow-[0_12px_30px_rgba(0,0,0,0.28)] ring-1 ring-white/16 sm:h-[72px] sm:w-[124px]">
             <Image
-              src="/logo_icon.jpg"
+              src="/New%20Logo1.png"
               alt="NW Premium Design LLC logo"
               fill
-              sizes="40px"
-              className="object-cover"
+              sizes="(max-width: 640px) 108px, 124px"
+              className="object-contain"
             />
           </div>
-          <span className="hidden font-serif text-sm font-semibold leading-tight text-white sm:block">
-            NW Premium
-            <br />
-            Design LLC
-          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -48,8 +43,8 @@ export function Header() {
                 href={link.href}
                 className={cn(
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-white text-black"
+                isActive
+                    ? "border border-white/25 bg-white/14 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                     : "text-white/90 hover:bg-white/10 hover:text-white"
                 )}
               >

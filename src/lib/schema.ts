@@ -10,7 +10,7 @@ export function buildLocalBusinessSchema() {
     name: BUSINESS.name,
     alternateName: BUSINESS.shortName,
     description:
-      "Seattle's premier cabinet installer and kitchen remodeler. NW Premium Design LLC offers kitchen remodeling, bathroom remodeling, cabinet installation, and cabinet supply services throughout the greater Seattle area.",
+      "NW Premium Design LLC provides kitchen cabinet installation, IKEA cabinet assembly, European cabinet installation, demolition, kitchen remodeling, bathroom remodeling, and cabinet supply throughout Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina, Sammamish, Federal Way, Auburn, and the greater Puget Sound area.",
     url: SITE_URL,
     telephone: BUSINESS.phone,
     email: BUSINESS.email,
@@ -50,6 +50,22 @@ export function buildLocalBusinessSchema() {
         {
           "@type": "Offer",
           itemOffered: { "@type": "Service", name: "Cabinet Installation" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Kitchen Cabinet Installation" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "IKEA Cabinet Assembly" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "European Cabinet Installation" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Demolition" },
         },
         {
           "@type": "Offer",

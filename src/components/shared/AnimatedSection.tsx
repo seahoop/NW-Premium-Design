@@ -9,6 +9,7 @@ interface AnimatedSectionProps {
   delay?: number;
   direction?: "up" | "left" | "right" | "none";
   amount?: number;
+  once?: boolean;
   /** Use "image" for a scale-up reveal effect on images/cards */
   variant?: "default" | "image";
 }
@@ -19,10 +20,11 @@ export function AnimatedSection({
   delay = 0,
   direction = "up",
   amount = 0.15,
+  once = true,
   variant = "default",
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount });
+  const inView = useInView(ref, { once, amount });
 
   if (variant === "image") {
     return (

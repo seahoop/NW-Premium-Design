@@ -72,17 +72,20 @@ export default function AboutPage() {
         }}
       />
       {/* Hero */}
-      <section className="relative bg-navy pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
-        {/* Background image with heavy overlay */}
+      <section className="relative overflow-hidden bg-navy pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
           src="/images/hero/hero-kitchen.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-top opacity-15"
+          className="object-cover object-top opacity-32"
           aria-hidden="true"
         />
+        <div className="absolute inset-0 bg-black/52" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="pointer-events-none absolute -left-24 top-8 size-72 rounded-full bg-black/20 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-20 size-80 rounded-full bg-white/[0.04] blur-3xl" />
         <div className="container-site relative z-10">
           <div className="grid items-center gap-10 lg:grid-cols-5 lg:gap-16">
             {/* Text — 3 cols */}

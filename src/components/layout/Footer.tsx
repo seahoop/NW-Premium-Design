@@ -36,19 +36,16 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto] lg:gap-16">
           {/* Brand column */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="relative size-10 overflow-hidden rounded-lg bg-cream shrink-0">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="relative h-[84px] w-[140px] shrink-0 overflow-hidden rounded-2xl bg-white/[0.06] p-2 ring-1 ring-white/10">
                 <Image
-                  src="/logo_icon.jpg"
+                  src="/New%20Logo1.png"
                   alt="NW Premium Design LLC logo"
                   fill
-                  sizes="40px"
-                  className="object-cover"
+                  sizes="140px"
+                  className="object-contain"
                 />
               </div>
-              <span className="font-serif text-base font-semibold leading-tight">
-                NW Premium Design LLC
-              </span>
             </div>
             <p className="text-sm text-cream/70 leading-relaxed max-w-xs mb-5">
               Seattle&apos;s trusted cabinet installer and kitchen remodeler.

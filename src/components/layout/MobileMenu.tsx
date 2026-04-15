@@ -47,7 +47,7 @@ export function MobileMenu() {
                 className={cn(
                   "rounded-md px-4 py-3 text-base font-medium transition-colors",
                   isActive
-                    ? "bg-white text-black"
+                    ? "border border-white/20 bg-white/14 text-white"
                     : "text-white/85 hover:bg-white/10 hover:text-white"
                 )}
               >

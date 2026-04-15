@@ -26,12 +26,14 @@ const contactInfo = [
     label: "Phone",
     value: BUSINESS.phoneDisplay,
     href: `tel:${BUSINESS.phone}`,
+    iconClassName: "bg-[#22c55e]/14 text-[#22c55e]",
   },
   {
     icon: Mail,
     label: "Email",
     value: BUSINESS.email,
     href: `mailto:${BUSINESS.email}`,
+    iconClassName: "bg-[#ea4335]/14 text-[#ea4335]",
   },
   {
     icon: MapPin,
@@ -39,12 +41,14 @@ const contactInfo = [
     value: BUSINESS.address.full,
     href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.address.full)}`,
     external: true,
+    iconClassName: "bg-[#0a84ff]/14 text-[#0a84ff]",
   },
   {
     icon: Clock,
     label: "Response Time",
     value: "Typically within 24 hours",
     href: null,
+    iconClassName: "bg-[#f59e0b]/14 text-[#f59e0b]",
   },
 ];
 
@@ -63,8 +67,20 @@ export default function ContactPage() {
         }}
       />
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
-        <div className="container-site">
+      <section className="relative overflow-hidden bg-navy pt-32 pb-16 sm:pt-36 sm:pb-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('/Contac%20me%20page%20landing%20page%20backgroudn.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/72" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="pointer-events-none absolute -left-24 top-8 size-72 rounded-full bg-black/30 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-20 size-80 rounded-full bg-white/[0.05] blur-3xl" />
+
+        <div className="container-site relative">
           <AnimatedSection className="max-w-2xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cream/55">
               Free Estimate
@@ -89,7 +105,7 @@ export default function ContactPage() {
               direction="left"
               className="lg:col-span-3 h-fit rounded-2xl bg-white p-6 shadow-sm sm:p-8"
             >
-              <div className="mb-8 rounded-3xl border border-white/20 bg-gradient-to-br from-[#2b2b2b] via-[#232323] to-[#181818] px-6 py-6 shadow-[0_18px_50px_rgba(0,0,0,0.28)] ring-1 ring-white/6 sm:px-7">
+              <div className="earthquake-card mb-8 rounded-3xl border border-white/20 bg-gradient-to-br from-[#2b2b2b] via-[#232323] to-[#181818] px-6 py-6 shadow-[0_18px_50px_rgba(0,0,0,0.28)] ring-1 ring-white/6 sm:px-7">
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/75">
                   Free Quote By Text
                 </p>
@@ -125,10 +141,12 @@ export default function ContactPage() {
                   Get in Touch
                 </h3>
                 <ul className="space-y-4">
-                  {contactInfo.map(({ icon: Icon, label, value, href, external }) => (
+                  {contactInfo.map(({ icon: Icon, label, value, href, external, iconClassName }) => (
                     <li key={label} className="flex items-start gap-3">
-                      <div className="flex size-9 items-center justify-center rounded-full bg-cream-dark shrink-0 mt-0.5">
-                        <Icon className="size-4 text-navy" />
+                      <div
+                        className={`mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full ${iconClassName}`}
+                      >
+                        <Icon className="size-4" />
                       </div>
                       <div>
                         <p className="text-xs text-navy/50 mb-0.5">{label}</p>
@@ -161,6 +179,13 @@ export default function ContactPage() {
               Service Area
             </h3>
             <ServiceAreaMap />
+            <p className="mt-4 max-w-4xl text-sm leading-relaxed text-navy/50">
+              Alex handles demolition, IKEA cabinet assembly, European cabinet
+              installation, and kitchen cabinet installation in Seattle,
+              Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina,
+              Sammamish, Federal Way, and Auburn, with service across the
+              greater Puget Sound area.
+            </p>
           </AnimatedSection>
         </div>
       </section>
