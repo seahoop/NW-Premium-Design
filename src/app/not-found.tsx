@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import { buttonVariants } from "@/lib/button-variants";
 import { cn } from "@/lib/utils";
+import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "Page Not Found — NW Premium Design LLC",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <section className="flex min-h-screen items-center justify-center bg-cream pt-16">
-      <div className="container-site text-center py-24 max-w-lg">
+      <AnimatedSection className="container-site text-center py-24 max-w-lg">
         <p className="text-sm font-semibold uppercase tracking-widest text-navy/50 mb-4">
           404 — Page Not Found
         </p>
@@ -33,7 +34,7 @@ export default function NotFound() {
             Get a Free Estimate
           </Link>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 }

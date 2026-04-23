@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ChefHat, Bath, Package, Truck, Wrench } from "lucide-react";
 import { featuredServices } from "@/data/services";
 import { SectionHeader } from "@/components/shared/SectionHeader";
@@ -17,37 +16,6 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export function ServicesGrid() {
-  const shouldReduceMotion = useReducedMotion();
-
-  const gridVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: shouldReduceMotion ? 0 : 0.16,
-        delayChildren: shouldReduceMotion ? 0 : 0.08,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: shouldReduceMotion ? 0 : 28,
-      scale: shouldReduceMotion ? 1 : 0.96,
-      filter: shouldReduceMotion ? "none" : "blur(8px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      filter: "blur(0px)",
-      transition: {
-        duration: shouldReduceMotion ? 0.25 : 0.75,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
-  };
-
   return (
     <section className="section-padding bg-navy-dark">
       <div className="container-site">
@@ -60,19 +28,14 @@ export function ServicesGrid() {
           />
         </AnimatedSection>
 
-        <motion.div
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-          variants={gridVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.35 }}
-        >
-          {featuredServices.map((service) => {
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredServices.map((service, i) => {
             const Icon = ICONS[service.icon] ?? Package;
             return (
-              <motion.div
+              <AnimatedSection
                 key={service.id}
-                variants={cardVariants}
+                delay={0.08 + i * 0.1}
+                variant="image"
               >
                 <Link
                   href={`/services/${service.slug}`}
@@ -109,10 +72,10 @@ export function ServicesGrid() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </AnimatedSection>
             );
           })}
-        </motion.div>
+        </div>
 
         <AnimatedSection delay={0.4} className="mt-10 text-center">
           <Link

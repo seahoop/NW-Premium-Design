@@ -1,4 +1,5 @@
 import { Star, Shield, MapPin, Users } from "lucide-react";
+import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 const stats = [
   { icon: Star, label: "5.0 Google Rating", sub: "5-star reviews" },
@@ -12,9 +13,10 @@ export function SocialProofBar() {
     <section className="bg-navy py-5">
       <div className="container-site">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {stats.map(({ icon: Icon, label, sub }) => (
-            <div
+          {stats.map(({ icon: Icon, label, sub }, i) => (
+            <AnimatedSection
               key={label}
+              delay={i * 0.08}
               className="flex items-center gap-3"
             >
               <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-cream/10">
@@ -26,7 +28,7 @@ export function SocialProofBar() {
                 </p>
                 <p className="text-xs text-cream/55 truncate">{sub}</p>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

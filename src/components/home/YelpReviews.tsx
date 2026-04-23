@@ -124,11 +124,13 @@ export function YelpReviews() {
   return (
     <section className="section-padding bg-cream">
       <div className="container-site">
-        <SectionHeader
-          eyebrow="Customer Reviews"
-          title="What Our Clients Say"
-          subtitle="Real reviews from real homeowners on Yelp"
-        />
+        <AnimatedSection>
+          <SectionHeader
+            eyebrow="Customer Reviews"
+            title="What Our Clients Say"
+            subtitle="Real reviews from real homeowners on Yelp"
+          />
+        </AnimatedSection>
 
         {/* Yelp rating summary */}
         <AnimatedSection once={false}>

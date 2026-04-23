@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 interface AnimatedSectionProps {
@@ -19,12 +19,45 @@ export function AnimatedSection({
   className,
   delay = 0,
   direction = "up",
-  amount = 0.15,
-  once = true,
+  amount = 0.01,
+  once = false,
   variant = "default",
 }: AnimatedSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const lastScrollY = useRef(0);
   const inView = useInView(ref, { once, amount });
+  const [isShown, setIsShown] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setIsShown(true);
+    }
+  }, [inView]);
+
+  useEffect(() => {
+    if (once || !ref.current) {
+      return;
+    }
+
+    lastScrollY.current = window.scrollY;
+    const handleScroll = () => {
+      if (!ref.current) {
+        return;
+      }
+
+      const currentScrollY = window.scrollY;
+      const isScrollingUp = currentScrollY < lastScrollY.current;
+      lastScrollY.current = currentScrollY;
+      const rect = ref.current.getBoundingClientRect();
+
+      if (isScrollingUp && rect.bottom <= 0) {
+        setIsShown(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [once]);
 
   if (variant === "image") {
     return (
@@ -33,7 +66,7 @@ export function AnimatedSection({
         className={className}
         initial={{ opacity: 0, scale: 0.92, y: 20 }}
         animate={
-          inView
+          isShown
             ? { opacity: 1, scale: 1, y: 0 }
             : { opacity: 0, scale: 0.92, y: 20 }
         }
@@ -59,7 +92,7 @@ export function AnimatedSection({
       ref={ref}
       className={className}
       initial={initial}
-      animate={inView ? { opacity: 1, y: 0, x: 0 } : initial}
+      animate={isShown ? { opacity: 1, y: 0, x: 0 } : initial}
       transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}

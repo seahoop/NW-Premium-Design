@@ -4,7 +4,7 @@ import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const reasons = [
-  "Hands-on work by Alex — not subcontractors",
+  "End-to-end work handled by Alex",
   "IKEA, European & custom cabinet expertise",
   "We can source & supply cabinets for you",
   "Honest pricing with no hidden fees",
@@ -14,8 +14,8 @@ const reasons = [
 const highlights = [
   {
     icon: Hammer,
-    title: "One Craftsman",
-    description: "Alex personally handles every project from start to finish.",
+    title: "Owner-Led Work",
+    description: "Alex handles projects end to end and brings in trusted outside help only when necessary.",
   },
   {
     icon: ShieldCheck,
@@ -43,9 +43,9 @@ export function AboutBlurb() {
             />
             <p className="text-base leading-relaxed text-navy/70 mb-4">
               NW Premium Design LLC is run by Alex — a hands-on remodeling
-              professional based in Seattle. When you hire us, Alex personally
-              handles your project from start to finish. No crews of
-              strangers, no hand-offs.
+              professional based in Seattle. When you hire us, Alex handles
+              your project from start to finish and brings in trusted outside
+              help only when the work requires it.
             </p>
             <p className="text-base leading-relaxed text-navy/70 mb-6">
               Whether you need a full kitchen remodel, a single cabinet

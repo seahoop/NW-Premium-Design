@@ -112,14 +112,14 @@ export default async function ServicePage({
       <section className="section-padding bg-cream">
         <div className="container-site">
           <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2 space-y-4">
+            <AnimatedSection direction="left" className="lg:col-span-2 space-y-4">
               {service.description.map((para, i) => (
                 <p key={i} className="text-base leading-relaxed text-navy/75">
                   {para}
                 </p>
               ))}
-            </div>
-            <div>
+            </AnimatedSection>
+            <AnimatedSection direction="right">
               <div className="rounded-2xl bg-navy p-6">
                 <h3 className="font-serif text-lg font-semibold text-cream mb-4">
                   What&apos;s Included
@@ -140,7 +140,7 @@ export default async function ServicePage({
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -149,25 +149,28 @@ export default async function ServicePage({
       {otherServices.length > 0 && (
         <section className="section-padding bg-cream-dark">
           <div className="container-site">
-            <h2 className="font-serif text-2xl font-semibold text-navy mb-8">
-              Other Services
-            </h2>
+            <AnimatedSection>
+              <h2 className="font-serif text-2xl font-semibold text-navy mb-8">
+                Other Services
+              </h2>
+            </AnimatedSection>
             <div className="grid gap-6 sm:grid-cols-3">
-              {otherServices.map((s) => (
-                <Link
-                  key={s.id}
-                  href={`/services/${s.slug}`}
-                  className="group flex flex-col gap-3 rounded-xl bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <h3 className="font-serif text-lg font-semibold text-navy group-hover:text-navy-light transition-colors">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-navy/60 line-clamp-2">{s.tagline}</p>
-                  <div className="flex items-center gap-1 text-sm font-semibold text-navy mt-auto">
-                    Learn more{" "}
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Link>
+              {otherServices.map((s, i) => (
+                <AnimatedSection key={s.id} delay={i * 0.08} variant="image">
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="group flex h-full flex-col gap-3 rounded-xl bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+                  >
+                    <h3 className="font-serif text-lg font-semibold text-navy group-hover:text-navy-light transition-colors">
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-navy/60 line-clamp-2">{s.tagline}</p>
+                    <div className="flex items-center gap-1 text-sm font-semibold text-navy mt-auto">
+                      Learn more{" "}
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </Link>
+                </AnimatedSection>
               ))}
             </div>
           </div>

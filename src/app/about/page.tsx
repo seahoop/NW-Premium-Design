@@ -26,7 +26,7 @@ const values = [
     icon: Hammer,
     title: "Hands-On Craftsmanship",
     description:
-      "Alex personally handles every project. You won't deal with unfamiliar subcontractors — just direct, skilled work from start to finish.",
+      "Alex handles each project end to end, coordinating trusted outside help only when the work requires it while keeping one clear point of accountability.",
   },
   {
     icon: Star,
@@ -99,8 +99,9 @@ export default function AboutPage() {
                 <span className="text-cream/70">Backed by Trust.</span>
               </h1>
               <p className="max-w-lg text-base leading-relaxed text-cream/65 sm:text-lg">
-                Alex personally handles every project — from the first estimate
-                to the final installation. No subcontractors, no surprises.
+                Alex handles your project from the first estimate to final
+                installation, bringing in trusted outside help only when the
+                work requires it.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link

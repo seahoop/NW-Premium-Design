@@ -4,10 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Expand } from "lucide-react";
-import type { GalleryItem, GalleryCategory } from "@/types/gallery";
-import { galleryItems, getGalleryByCategory } from "@/data/gallery";
+import type { GalleryCategory } from "@/types/gallery";
+import { getGalleryByCategory } from "@/data/gallery";
 import { GalleryFilter } from "@/components/gallery/GalleryFilter";
 import { Lightbox } from "@/components/gallery/Lightbox";
+import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { cn } from "@/lib/utils";
 
 export function GalleryGrid() {
@@ -25,7 +26,9 @@ export function GalleryGrid() {
 
   return (
     <>
-      <GalleryFilter active={activeCategory} onChange={setActiveCategory} />
+      <AnimatedSection>
+        <GalleryFilter active={activeCategory} onChange={setActiveCategory} />
+      </AnimatedSection>
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -37,39 +40,41 @@ export function GalleryGrid() {
           transition={{ duration: 0.25 }}
         >
           {filtered.map((item, i) => (
-            <motion.button
+            <AnimatedSection
               key={item.id}
-              className={cn(
-                "group relative overflow-hidden rounded-xl bg-cream-dark aspect-square cursor-pointer",
-                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
-              )}
-              onClick={() => handleOpen(i)}
-              aria-label={`View ${item.projectTitle}`}
-              initial={{ opacity: 0, scale: 0.92, y: 16 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ delay: i * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              delay={i * 0.04}
+              variant="image"
             >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="absolute inset-0 flex flex-col items-start justify-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <p className="text-xs font-semibold text-cream leading-tight">
-                  {item.projectTitle}
-                </p>
-                <p className="text-xs text-cream/60 capitalize mt-0.5">
-                  {item.category}
-                </p>
-              </div>
-              <div className="absolute right-2 top-2 flex size-8 items-center justify-center rounded-full bg-cream/20 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
-                <Expand className="size-4 text-cream" />
-              </div>
-            </motion.button>
+              <button
+                className={cn(
+                  "group relative aspect-square w-full overflow-hidden rounded-xl bg-cream-dark cursor-pointer",
+                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+                )}
+                onClick={() => handleOpen(i)}
+                aria-label={`View ${item.projectTitle}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 flex flex-col items-start justify-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <p className="text-xs font-semibold text-cream leading-tight">
+                    {item.projectTitle}
+                  </p>
+                  <p className="text-xs text-cream/60 capitalize mt-0.5">
+                    {item.category}
+                  </p>
+                </div>
+                <div className="absolute right-2 top-2 flex size-8 items-center justify-center rounded-full bg-cream/20 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+                  <Expand className="size-4 text-cream" />
+                </div>
+              </button>
+            </AnimatedSection>
           ))}
         </motion.div>
       </AnimatePresence>
