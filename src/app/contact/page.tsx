@@ -180,11 +180,11 @@ export default function ContactPage() {
             </h3>
             <ServiceAreaMap />
             <p className="mt-4 max-w-4xl text-sm leading-relaxed text-navy/50">
-              Alex handles demolition, IKEA cabinet assembly, European cabinet
+              Alex leads demolition, IKEA cabinet assembly, European cabinet
               installation, and kitchen cabinet installation in Seattle,
               Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina,
-              Sammamish, Federal Way, and Auburn, with service across the
-              greater Puget Sound area.
+              Sammamish, Federal Way, and Auburn, coordinating qualified
+              outside trades when specialized work is part of the project.
             </p>
           </AnimatedSection>
         </div>

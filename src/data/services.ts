@@ -8,7 +8,7 @@ export const services: Service[] = [
     shortTitle: "Cabinets",
     tagline: "Alex's specialty: kitchen cabinet installation, IKEA assembly, and European cabinet installs across Seattle and nearby cities",
     description: [
-      "Cabinet installation is Alex's specialty and the service NW Premium Design LLC is known for most. From IKEA systems to European and custom cabinetry, Alex handles the details that make a finished installation look sharp and function correctly across Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina, Sammamish, Federal Way, and Auburn.",
+      "Cabinet installation is Alex's specialty and the service NW Premium Design LLC is known for most. From IKEA systems to European and custom cabinetry, Alex manages the details that make a finished installation look sharp and function correctly across Seattle, Bellevue, Kirkland, Newcastle, Renton, Tacoma, Burien, Medina, Sammamish, Federal Way, and Auburn.",
       "Whether you need a full kitchen install, built-in storage, or cabinet replacement in a single room, you get precise layout, clean lines, and finish work that holds up over time.",
     ],
     highlights: [
@@ -169,7 +169,7 @@ export const services: Service[] = [
       },
       {
         question: "Do you offer supply-and-install packages?",
-        answer: "Yes, we offer full supply-and-install packages. We handle sourcing, delivery coordination, and professional installation as a complete one-stop solution.",
+        answer: "Yes, we offer full supply-and-install packages. Alex coordinates sourcing, delivery, installation, and any qualified outside trades needed for a complete project flow.",
       },
       {
         question: "Is it cheaper to buy cabinets through you?",

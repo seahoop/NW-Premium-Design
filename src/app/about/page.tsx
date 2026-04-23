@@ -26,7 +26,7 @@ const values = [
     icon: Hammer,
     title: "Hands-On Craftsmanship",
     description:
-      "Alex handles each project end to end, coordinating trusted outside help only when the work requires it while keeping one clear point of accountability.",
+      "Alex stays hands-on and accountable from estimate to finish, coordinating qualified outside trades when plumbing, electrical, or specialty work is needed.",
   },
   {
     icon: Star,
@@ -99,9 +99,9 @@ export default function AboutPage() {
                 <span className="text-cream/70">Backed by Trust.</span>
               </h1>
               <p className="max-w-lg text-base leading-relaxed text-cream/65 sm:text-lg">
-                Alex handles your project from the first estimate to final
-                installation, bringing in trusted outside help only when the
-                work requires it.
+                Alex leads your project from the first estimate to final
+                installation, bringing in qualified outside help when the work
+                requires specialized trades.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
@@ -154,9 +154,10 @@ export default function AboutPage() {
               <p className="text-base leading-relaxed text-navy/70">
                 NW Premium Design LLC is a Seattle-based remodeling company
                 built on a simple idea: great craftsmanship, honest pricing,
-                and personal attention. Owner and operator Alex handles every
-                project himself — from the first estimate to the final
-                installation.
+                and personal attention. Owner and operator Alex stays directly
+                involved from the first estimate to the final installation,
+                coordinating qualified outside trades when plumbing,
+                electrical, or other specialty work is needed.
               </p>
               <p className="text-base leading-relaxed text-navy/70">
                 With deep expertise in IKEA kitchen systems, European frameless
